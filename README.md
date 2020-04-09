@@ -2,7 +2,16 @@
 ## Description of data and scripts used.
 
 ### 1 Data
-All data was obtained at [OrthoDB v9.1](https://www.orthodb.org/v9.1/index.html?page=filelist). We used both flat files [link](addlink) and [link](addlink).
+All data was obtained at [OrthoDB v9.1](https://www.orthodb.org/v9.1/index.html?page=filelist). 
 
-### 2 Scripts
-We used the 0-GetArthropodaOrthoIDs.py to retrieve all GROUPS sequences. Then we used 1-ParseOrthoDB_createMultipleCopies.py and 2-CreateSingleCopies.py to create one fasta sequence per gene family. The first script generate fasta sequences where multiple copies are allowed (to run CAFE) and the second script generate fasta sequences with single-copies (to run MCMCtree).
+- The [0-GetArthropodaOrthoIDs.py]() script was used to get all orthologous IDs related wih Insecta from the [table of cluster ids file](https://www.orthodb.org/v9.1/download/odb9v1_OGs.tab.gz). Next the script parsed the [map cluster ids to gene ids file](https://www.orthodb.org/v9.1/download/odb9v1_OG2genes.tab.gz) to create a new "all cluster ids to gene ids" file for Arthropoda;
+
+- The [1-ParseOrthoDB_createMultipleCopies.py]() script was used to create one fasta file for each orthologous group using [the fasta files for Metazoa](https://www.orthodb.org/v9.1/download/odb9v1_metazoa_fasta.tar.gz) and the "all cluster ids to gene ids" file for Arthropoda.
+
+- The [2-CreateSingleCopies.py]() script was used to create single-copy fasta files for each orthologous group. 
+
+- The [3-MafftGblocksLoop.py]() script was to run  mafft and Gblocks to align and remove gap-rich regions..
+
+- The [4-CheckGblocks.py]() script was used to select orthologous groups that were used to estimate the divergence time.
+
+- The [5-CreateCAFEtable.py]() script was used to create CAFE's input table.
