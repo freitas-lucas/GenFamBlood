@@ -1,7 +1,7 @@
 # GenFamBlood
 ## Description of data and scripts used.
 
-### 1 Data
+### Data and scripts
 All data was obtained at [OrthoDB v9.1](https://www.orthodb.org/v9.1/index.html?page=filelist). 
 
 - The [0-GetArthropodaOrthoIDs.py](https://github.com/freitas-lucas/GenFamBlood/blob/master/0-GetArthropodaOrthoIDs.py) script was used to get all orthologous IDs related wih Insecta from the [table of cluster ids file](https://www.orthodb.org/v9.1/download/odb9v1_OGs.tab.gz). Next the script parsed the [map cluster ids to gene ids file](https://www.orthodb.org/v9.1/download/odb9v1_OG2genes.tab.gz) to create a new "all cluster ids to gene ids" file for Arthropoda;
