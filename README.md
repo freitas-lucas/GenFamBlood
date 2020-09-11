@@ -1,5 +1,5 @@
 # GenFamBlood
-## Description of data and scripts used.
+## Description of data and scripts used by [Freitas & Nery (2020)](https://bmcevolbiol.biomedcentral.com/articles/10.1186/s12862-020-01650-3).
 
 ### Data and scripts
 All data was obtained at [OrthoDB v9.1](https://www.orthodb.org/v9.1/index.html?page=filelist). 
